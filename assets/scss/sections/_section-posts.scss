@@ -1,0 +1,131 @@
+.posts-title {
+    margin: 60px 0 40px;
+    font-family: $font-header;
+    color: $color-main;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.posts {
+    padding: 20px;
+
+    &__grid {
+        display: grid;
+        padding: 0 0 20px;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'p1 p1 p2 p3'
+        'p4 p5 p6 p6';
+    }
+
+    &__container {
+        @extend %container;
+    }
+}
+
+.posts-item {
+    position: relative;
+    background-color: $color-gray-light;
+    overflow: hidden;
+    
+    
+    &:nth-of-type(1) {
+        grid-area: p1;
+    }
+
+    &:nth-of-type(2) {
+        grid-area: p2;
+    }
+
+    &:nth-of-type(3) {
+        grid-area: p3;
+    }
+
+    &:nth-of-type(4) {
+        grid-area: p4;
+    }
+
+    &:nth-of-type(5) {
+        grid-area: p5;
+    }
+
+    &:nth-of-type(6) {
+        grid-area: p6;
+    }
+
+    &__link {
+        display: grid;
+        overflow: hidden;
+        height: 100%;
+        grid-template-rows: 300px 1fr;
+    }
+
+    &__image {
+        display: flex;
+        overflow: hidden;        
+        height: 300px;
+        background-size: cover;
+        background-position: 50% 50%;
+        
+        img {
+            object-fit: cover;
+            width: 100%;
+
+            transition: transform 0.5s;
+        }
+    }
+        
+
+    &__info {
+        color: $color-gray-dark;
+        letter-spacing: 0.05em;
+        text-align: center;
+        padding: $gap;
+    }
+
+    &:hover {    
+        .posts-item__image img {
+          transform: scale(1.1);
+        }
+    }
+}
+
+
+@media (max-width: $lg) and (min-width: $md) {
+    .posts__grid {
+        grid-gap: $gap / 2;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        'p1 p1 p2'
+        'p3 p4 p4'
+        'p5 p5 p6';
+    }
+}
+
+@media (max-width: $md) and (min-width: $sm) {
+    .posts__grid {
+        grid-gap: $gap / 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'p1 p2'
+        'p3 p4'
+        'p5 p6';
+    }
+}
+
+@media (max-width: $sm) {
+    .posts__grid {
+        grid-gap: $gap / 2;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'p1'
+            'p2'
+            'p3'
+            'p4'
+            'p5'
+            'p6';
+        
+    }
+}
+

@@ -1,0 +1,67 @@
+.footer {
+    padding: 50px 20px 70px;
+    text-align: center;
+    background-color: $color-main;
+
+    &__container {
+        @extend %container;       
+    }   
+
+    &__social {
+        display: grid;
+        position: relative;
+
+        margin-bottom: 40px;
+
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+        justify-content: center;
+    
+        &::after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 2px;
+          background-color: white;
+          opacity: 0.1;
+          position: absolute;
+          top: 60px;
+          left: calc(50% - 40px);
+    }
+
+    .fab {
+        font-size: 36px;
+        transition: color 0.5s ease-in-out;
+
+        &:hover,
+        &:focus {
+        color: $color-accent;
+
+        
+      }
+    }
+
+    .a {
+        display: block;
+      
+        padding: 10px;        
+    }   
+  }
+
+  
+    &__logo {
+      span {
+        &:nth-of-type(1) {
+          margin-right: -0.5em; 
+          letter-spacing: 0.33em; 
+          font-weight: 100;
+        }
+  
+        &:nth-of-type(2) {
+          letter-spacing: 0.05em;  
+          color: $color-gray-light; 
+          font-weight: 700;
+        }
+      }
+  }
+}
+
