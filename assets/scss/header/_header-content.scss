@@ -18,8 +18,31 @@
     display: flex;
     justify-content: center;
 
+
     .btn:first-of-type {
-      margin-right: $gap;
-    }
+      @media all and (min-width: $sm) {
+        margin-right: $gap;
+      }
+    }    
+  }
+
+  &__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .header-content__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    margin: 20px;
   }
 }

@@ -22,12 +22,14 @@
             color: $color-gray-light;
             font-size: 18px;
             letter-spacing: 2px;
-
             border: 2px solid;
             border-color: $color-main;
-            border-bottom-color: $color-gray;
-            
+            border-bottom-color: $color-gray;            
             transition: all 0.5s;
+
+            @include md-sm {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
 
         &__input {
@@ -43,6 +45,11 @@
             border-bottom-color: $color-gray;
             transition: all 0.5s;
             
+            &::placeholder{
+                color: $color-gray-light;
+                opacity: 0.2;
+                letter-spacing: 3px;
+            }
         }
         
         &:nth-of-type(1) {

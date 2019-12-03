@@ -55,11 +55,27 @@ a {
       display: flex;
       justify-content: center;
       padding: 20px 0 40px;
+
+      @include md-sm {
+        padding: 0 0 20px;
+      }
+
+      @include sm {
+        padding: 0;
+      }
     }
     &.-style__viewall {
       border: 2px solid black;
-      background-color: $color-gray-dark;
+      background-color: rgba(45, 54, 81, 0.8);
       min-width: 350px;
+
+      @include sm {
+        margin: 0;
+        min-width: 100%;
+        height: 60px;
+        font-size: 18px;
+        padding: 18px 20px;
+      }
     }
 
     &.-style__form {
@@ -68,6 +84,30 @@ a {
         border: 2px solid $color-gray-light;
       }
     }
+
+    &.-style__header {
+      @include lg-md {
+        min-width: 200px;
+        height: 50px;
+        padding: 14px 20px;
+        font-size: 16px;
+      }
+
+      @include md-sm {
+        min-width: 170px;
+        height: 40px;
+        padding: 10px 20px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+      }
+
+      @include sm {
+        margin: 0 0 20px;
+      }
+
+    }
+
+    
 }
 
 .btn:hover {
