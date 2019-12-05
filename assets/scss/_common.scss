@@ -54,7 +54,7 @@ a {
     &-wrapper {
       display: flex;
       justify-content: center;
-      // padding: 20px 0 40px;
+      
 
       @include md-sm {
         padding: 0 0 20px;

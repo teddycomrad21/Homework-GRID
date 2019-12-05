@@ -30,7 +30,7 @@
         color: $color-main;
         font-size: 40px;
         margin: 0 0 56px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
 
         @include lg-md {
             font-size: 32px;
@@ -44,7 +44,7 @@
 
         @include sm {
             font-size: 24px;
-            margin: 0 0 24px;
+            margin: 0 0 36px;
             text-align: center;
         }
     }
