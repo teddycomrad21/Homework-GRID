@@ -54,7 +54,7 @@ a {
     &-wrapper {
       display: flex;
       justify-content: center;
-      padding: 20px 0 40px;
+      // padding: 20px 0 40px;
 
       @include md-sm {
         padding: 0 0 20px;
@@ -65,7 +65,7 @@ a {
       }
     }
     &.-style__viewall {
-      border: 2px solid black;
+      border: 2px solid $color-main;
       background-color: rgba(45, 54, 81, 0.8);
       min-width: 350px;
 
