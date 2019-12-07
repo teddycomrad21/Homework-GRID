@@ -28,6 +28,10 @@
         padding-bottom: 60px;
     }
 
+    @media (min-width: $lg) {
+        padding: 100px 0;
+    }
+
     &__grid {
         display: grid;
         padding: 0 0 20px;
@@ -47,6 +51,7 @@
     position: relative;
     background-color: $color-gray-light;
     overflow: hidden;
+    transition: all 0.5s;
     
     
     &:nth-of-type(1) {
@@ -71,6 +76,10 @@
 
     &:nth-of-type(6) {
         grid-area: p6;
+    }
+
+    &:hover {
+        background-color: #d8d8d8;
     }
 
     &__link {

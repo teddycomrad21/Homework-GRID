@@ -857,12 +857,13 @@ a {
   color: #2d3651;
   font-size: 40px;
   margin: 0 0 56px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .about__text {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
+  font-size: 18px;
 }
 
 .about__text:first-of-type {
@@ -1018,6 +1019,9 @@ a {
   position: relative;
   background-color: #e5e5e5;
   overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .posts-item:nth-of-type(1) {
@@ -1042,6 +1046,10 @@ a {
 
 .posts-item:nth-of-type(6) {
   grid-area: p6;
+}
+
+.posts-item:hover {
+  background-color: #d8d8d8;
 }
 
 .posts-item__link {
@@ -1157,7 +1165,7 @@ a {
 
 @media (min-height: 691px) {
   .skill-item {
-    min-height: calc(251px - 20px * 0.66);
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 }
 
@@ -1182,6 +1190,9 @@ a {
   }
   .header-content__title {
     margin: 0 0 53px;
+  }
+  .posts {
+    padding: 100px 0;
   }
 }
 

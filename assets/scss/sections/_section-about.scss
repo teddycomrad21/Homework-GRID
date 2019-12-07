@@ -30,7 +30,7 @@
         color: $color-main;
         font-size: 40px;
         margin: 0 0 56px;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
 
         @include lg-md {
             font-size: 32px;
@@ -52,6 +52,7 @@
     &__text {
         font-family: $font-main;
         letter-spacing: 1px;
+        font-size: 18px;
 
         &:first-of-type {
             position: relative;

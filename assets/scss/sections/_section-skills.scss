@@ -24,7 +24,7 @@
   overflow: hidden;
 
   @media (min-height: 691px) {
-    min-height: calc(251px - #{$gap} * 0.66);
+    min-height: calc(33.33vh - #{$gap} * 0.66);
   }
 
   @media (max-height: 690px) {
